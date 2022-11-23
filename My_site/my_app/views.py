@@ -4,4 +4,10 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'my_app/index.html')
+
+
+def variable_view(request):
+    my_name = {'firstname': 'abhinav'}
+    context = {'my_name': my_name}
+    return render(request, 'my_app/variable.html', context)

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'my_app/css/first.css' %}">
+    <title>Review</title>
+</head>
+<body>
+    <h1 class="center">Review Form</h1>
+    <div class="cotainer">
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for item in form %}
+            <div class="form-control">
+                {{item.label_tag}}
+            </div>
+            {{item}}
+            {% endfor %}
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</body>
+</html>

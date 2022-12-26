@@ -1,0 +1,5 @@
+Write a function which input any number of values if length is greater than 2 ->perform both addition and multiplication
+eg:
+f(1,2,3) = 1+2+3 =
+f(1,2) = 1*2 =
+gmail: shakyarajad1@gmail.com 

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponse
 from .forms import ReviewForm
+from django.views.generic import TemplateView
 # Create your views here.
 
 
@@ -27,5 +28,5 @@ def rental_review(request):
     return render(request, 'my_app/rental_review.html', context)
 
 
-def thankyou(request):
-    return render(request, 'my_app/thank_you.html')
+class ThankYouView(TemplateView):
+    template_name = "my_app/thank_you.html"

@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Index</title>
   </head>
   <body>
-    <h2>This is the index page in application level !!!</h2>
-    
+      <h1>Welcome to the index page</h1>
+      <ul>
+        <li>
+          <a href=" {% url 'my_app:rental_review' %} ">Rental Review Page !!</a>
+        </li>
+        <li>
+          <a href="{% url 'my_app:thank_you' %}" >Thank You Page !!</a>
+        </li>
+        <li></li>
+      </ul>
   </body>
 </html>

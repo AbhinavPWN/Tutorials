@@ -1,6 +1,7 @@
 from django import forms
 from .models import Review
 
+
 # class ReviewForm(forms.Form):
 #     first_name = forms.CharField(label='First Name', max_length=100)
 #     last_name = forms.CharField(label='Last Name', max_length=100)
@@ -12,4 +13,18 @@ from .models import Review
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['first_name', 'last_name', 'age']
+        #fields = ['first_name', 'last_name', 'age']
+        fields = '__all__'
+
+        labels = {
+            'first_name': 'Your name',
+            'last_name': 'LAST name',
+            'age': 'Your Age'
+        }
+
+        error_messages = {
+            'age': {
+                'min_value': 'The min value is 1',
+                'max_value': 'The max value is 30'
+            }
+        }

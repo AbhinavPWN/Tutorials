@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's List</title>
+</head>
+<body>
+    <h2>Lists of Teachers</h2>
+    <ul>
+    {% for teachers  in teachers_name %}
+        <li> <a href="/my_app/teacher_details/{{teachers.id}}">{{teachers.first_name}} {{teachers.last_name}}</li>
+        <a href="/my_app/update_teacher/{{teachers.id}}"><button>Update</button></a>
+        <a href="/my_app/delete_teacher/{{teachers.id}}" style="color: red;">Delete</a>    
+    {% endfor %}
+    </ul>
+    <a href="{% url 'my_app:index' %}" ><button>Home</button></a>
+</body>
+</html>

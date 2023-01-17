@@ -7,6 +7,12 @@
     <title>Index</title>
   </head>
   <body>
+
+    <!-- * This is the comment  -->
+    <!-- !Important Comment -->
+    <!-- ? Not Sure about this comment -->
+    <!-- todo This comment is given to as a TODO list -->
+
       <h1>Welcome to the index page</h1>
       <ul>
         <li>
@@ -15,7 +21,15 @@
         <li>
           <a href="{% url 'my_app:thank_you' %}" >Thank You Page !!</a>
         </li>
-        <li></li>
+        <li>
+          <a href="{% url 'my_app:contact' %}" > Contact Us page</a>
+        </li>
+        <li>
+          <a href="{% url 'my_app:teacher_form' %}" >Teacher Form</a>
+        </li>
+        <li>
+          <a href="{% url 'my_app:teacher_lists' %}">Teacher's Lists</a>
+        </li>
       </ul>
   </body>
 </html>

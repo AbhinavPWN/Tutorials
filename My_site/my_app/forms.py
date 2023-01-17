@@ -28,3 +28,9 @@ class ReviewForm(forms.ModelForm):
                 'max_value': 'The max value is 30'
             }
         }
+
+
+class ContactForm(forms.Form):
+    name = forms.CharField()
+    message = forms.CharField(
+        max_length=500, required=False, widget=forms.Textarea)

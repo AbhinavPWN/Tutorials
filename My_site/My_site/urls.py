@@ -16,10 +16,13 @@ Including another URLconf
 from django.conf.urls import handler404
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('my_app/', include('my_app.urls'))
+    path('my_app/', include('my_app.urls')),
+    path('catalog/', include('catalog.urls')),
+    path('', RedirectView.as_view(url='catalog/'))
 ]
 
 handler404 = 'My_site.views.my_custom_page_not_found_view'

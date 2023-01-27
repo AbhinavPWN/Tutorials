@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('my_app/', include('my_app.urls')),
     path('catalog/', include('catalog.urls')),
-    path('', RedirectView.as_view(url='catalog/'))
+    path('', RedirectView.as_view(url='catalog/')),
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
 
 handler404 = 'My_site.views.my_custom_page_not_found_view'
